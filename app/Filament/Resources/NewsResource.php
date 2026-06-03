@@ -40,7 +40,7 @@ class NewsResource extends Resource
                     ->image()
                     ->columnSpanFull(),
                 Forms\Components\TextInput::make('users_id')
-                    ->default(auth()->user()->id)
+                    ->default(fn () => auth()->id())
                     ->readOnly(),
                 Forms\Components\TextInput::make('slug')
                     ->required()
@@ -59,7 +59,7 @@ class NewsResource extends Resource
                     ->wrap()
                     ->html()
                     ->searchable(),
-                Tables\Columns\TextColumn::make('users.name')
+                Tables\Columns\TextColumn::make('user.name')
                     ->searchable(),
                 Tables\Columns\ImageColumn::make('image'),
                 Tables\Columns\TextColumn::make('created_at')

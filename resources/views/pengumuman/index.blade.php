@@ -7,17 +7,25 @@
         <p class="text-neutral-200 text-sm sm:text-base font-montserrat font-semibold">Dapatkan Pengumuman terbaru</p>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-8">
-            @foreach ($announcements as $announcement)
+            @forelse ($announcements as $announcement)
                 <div class="py-[26px] px-7 rounded-[20px] border border-neutral-100 bg-white">
-                    <a href="#" class="text-base sm:text-lg font-montserrat font-semibold text-neutral-400 line-clamp-2 mb-4">
-                        {{ $announcement['title'] }}
+                    <a href="{{ route('pengumuman.show', $announcement->slug) }}" class="text-base sm:text-lg font-montserrat font-semibold text-neutral-400 line-clamp-2 mb-4">
+                        {{ $announcement->title }}
                     </a>
                     <p class="font-montserrat text-xs sm:text-sm font-semibold text-neutral-200 mb-1.5">
-                        {!! $announcement['content'] !!}
+                        {{ Str::limit(strip_tags($announcement->content), 120, '...') }}
                     </p>
-                    <p class="font-montserrat text-xs font-semibold text-neutral-200">{{ $announcement['date'] }}</p>
+                    <p class="font-montserrat text-xs font-semibold text-neutral-200">
+                        {{ \Carbon\Carbon::parse($announcement->created_at)->format('d/m/Y') }}
+                    </p>
                 </div>
-            @endforeach
+            @empty
+                <div class="py-[26px] px-7 rounded-[20px] border border-neutral-100 bg-white">
+                    <p class="font-montserrat text-base font-semibold text-neutral-400">
+                        No Data Available
+                    </p>
+                </div>
+            @endforelse
         </div>
     </article>
 

@@ -9,9 +9,9 @@ class Aboutme extends Model
 {
     use HasFactory;
 
-    protected $guarded =[];
+    protected $guarded = [];
 
-    protected $cast = [
+    protected $casts = [
         'image' => 'array',
     ];
 }

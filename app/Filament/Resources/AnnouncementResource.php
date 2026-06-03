@@ -35,7 +35,7 @@ class AnnouncementResource extends Resource
                     ->required()
                     ->columnSpanFull(),
                 Forms\Components\TextInput::make('users_id')
-                    ->default(auth()->user()->id)
+                    ->default(fn () => auth()->id())
                     ->readOnly(),
                 Forms\Components\TextInput::make('slug')
                     ->required()
@@ -55,7 +55,6 @@ class AnnouncementResource extends Resource
                     ->html()
                     ->searchable(),
                     Tables\Columns\TextColumn::make('user.name')
-                    ->numeric()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()

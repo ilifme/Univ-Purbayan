@@ -1,3 +1,9 @@
+@php
+    $footerLogo = $datafooter?->image
+        ? \Illuminate\Support\Facades\Storage::url($datafooter->image)
+        : asset('assets/images/logo-smk.png');
+@endphp
+
     <!-- FOOTER SECTION -->
 <footer class="w-full mt-14 pt-20">
     <div
@@ -6,7 +12,7 @@
     <div>
         <img
         class="mb-10"
-        src="{{ $datafooter->image ? Storage::url($datafooter->image) : asset('assets/images/logo-smk.png') }}"
+        src="{{ $footerLogo }}"
         alt="Logo SMK"
         />
         <p class="text-medium text-xneutral-200 font-poppins text-sm mb-6">

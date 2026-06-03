@@ -86,7 +86,7 @@
         @else
             @foreach ($cooperationImg as $image)
               <img
-                  class="w-12 md:w-fit"
+                  class="w-12 md:w-28 h-16 object-contain"
                   src="{{ asset('storage/'. $image->image)}}"
                   alt="Cooperation"
               />

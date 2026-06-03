@@ -27,6 +27,8 @@ class AboutmeResource extends Resource
                 ->columnSpanFull(),
                 Forms\Components\FileUpload::make('image')
                 ->image()
+                ->multiple()
+                ->maxFiles(3)
                 ->required()
                 ->columnSpanFull(),
             ]);
