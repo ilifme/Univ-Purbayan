@@ -4,7 +4,7 @@
         <div>
           <a href="{{ route ('index')}}">
             <img
-              src="{{asset('assets/images/logo-purbayan.png')}}"
+              src="{{asset('assets/images/logo-larana.png')}}"
               height="60"
               class="max-h-[60px]"
               alt=""
