@@ -1,4 +1,4 @@
-import defaultTheme from 'tailwindcss/defaultTheme';
+﻿import defaultTheme from 'tailwindcss/defaultTheme';
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -13,6 +13,23 @@ export default {
         extend: {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                montserrat: ['Montserrat', 'sans-serif'],
+                poppins: ['Poppins', 'sans-serif'],
+            },
+            colors: {
+                primary: {
+                    200: '#264790',
+                },
+                xneutral: {
+                    0: '#ffffff',
+                    100: '#d9d9d9',
+                    200: '#939393',
+                    300: '#565656',
+                    400: '#272829',
+                },
+                neutral: {
+                    0: '#ffffff',
+                },
             },
         },
     },
