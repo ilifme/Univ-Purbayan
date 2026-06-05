@@ -1,0 +1,9 @@
+/storage/app
+/.env
+/.gitattributes
+/.editorconfig
+/phpunit.xml
+/postcss.config.js
+/tailwind.config.js
+/README.md
+/BUniversity-template
