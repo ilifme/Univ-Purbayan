@@ -15,5 +15,6 @@
     { "src": "/robots.txt", "dest": "/robots.txt" },
     { "src": "/(.*)", "dest": "/api/index.php" }
   ],
-  "buildCommand": "bash vercel-build.sh"
+  "buildCommand": "bash vercel-build.sh",
+  "outputDirectory": "public"
 }
