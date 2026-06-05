@@ -1,12 +1,12 @@
 @extends('layouts.app')
 @section('content')
     <!-- HERO SECTION -->
-    <section class="container min-h-[90vh] relative mt-28">
+    <section class="w-full min-h-[90vh] relative mt-28 overflow-hidden">
       <div
         id="hero-1"
         class="absolute animate-fade top-0 left-0 w-full h-full flex flex-col lg:flex-row lg:portrait:flex-col items-center justify-center rounded-[30px]"
       >
-        <div class="px-4 md:pl-12 w-full lg:w-1/2 lg:portrait:w-full">
+        <div class="px-4 md:pl-12 md:pr-4 w-full lg:w-1/2 lg:portrait:w-full">
           <h1
             class="text-4xl font-semibold font-montserrat md:text-5xl/[60px] text-white mb-7"
           >
@@ -20,7 +20,7 @@
         </div>
         <img
           src="../assets/images/hero-illustration-1.png"
-          class="mr-12 sm:-mr-12 z-0 w-full lg:w-1/2 lg:portrait:w-4/5"
+          class="mr-4 sm:mr-8 z-0 w-full lg:w-1/2 lg:portrait:w-4/5"
           alt="Hero Image"
         />
       </div>
@@ -28,7 +28,7 @@
         id="hero-2"
         class="absolute top-0 animate-fade left-0 w-full h-full flex flex-col lg:flex-row lg:portrait:flex-col items-center justify-center rounded-[30px]"
       >
-        <div class="px-4 md:pl-12 w-full lg:w-1/2 lg:portrait:w-full">
+        <div class="px-4 md:pl-12 md:pr-4 w-full lg:w-1/2 lg:portrait:w-full">
           <h1
             class="text-4xl font-semibold font-montserrat md:text-5xl/[60px] text-white mb-7"
           >
@@ -42,7 +42,7 @@
         </div>
         <img
           src="../assets/images/hero-illustration-2.png"
-          class="mr-12 sm:-mr-12 z-0 w-full lg:w-1/2 lg:portrait:w-4/5"
+          class="mr-4 sm:mr-8 z-0 w-full lg:w-1/2 lg:portrait:w-4/5"
           alt="Hero Image"
         />
       </div>
@@ -50,7 +50,7 @@
         id="hero-3"
         class="absolute animate-fade top-0 left-0 w-full h-full flex flex-col lg:flex-row lg:portrait:flex-col items-center justify-center rounded-[30px]"
       >
-        <div class="px-4 md:pl-12 w-full lg:w-1/2 lg:portrait:w-full">
+        <div class="px-4 md:pl-12 md:pr-4 w-full lg:w-1/2 lg:portrait:w-full">
           <h1
             class="text-4xl font-semibold font-montserrat md:text-5xl/[60px] text-white mb-7"
           >
@@ -64,7 +64,7 @@
         </div>
         <img
           src="../assets/images/hero-illustration-3.png"
-          class="mr-12 sm:-mr-12 z-0 w-full lg:w-1/2 lg:portrait:w-4/5"
+          class="mr-4 sm:mr-8 z-0 w-full lg:w-1/2 lg:portrait:w-4/5"
           alt="Hero Image"
         />
       </div>
@@ -103,7 +103,7 @@
       <div
         class="container grid grid-cols-1 md:grid-cols-2 items-center gap-12"
       >
-        <div class="space-y-4 lg:ml-20">
+        <div class="space-y-4 lg:ml-10">
           <h3
             class="text-primary-200 font-bold text-xl sm:text-2xl font-montserrat"
           >
@@ -160,7 +160,7 @@
     <!-- END OF ABOUT SECTION -->
 
     <!-- NEWS SECTION -->
-    <section class="container relative">  
+    <section class="container mx-auto px-4 sm:px-6 lg:px-8 relative">  
       <div class="mb-10 flex justify-between items-center">
           <div>
               <h3
@@ -236,7 +236,7 @@
     <!-- END OF NEWS SECTION -->
 
     <!-- RECTOR SECTION -->
-    <section class="container mt-28">
+    <section class="container mx-auto px-4 sm:px-6 lg:px-8 mt-28">
       <div class="text-center space-y-2">
         <h3
           class="font-montserrat font-semibold text-xneutral-400 text-xl sm:text-2xl"
@@ -281,7 +281,7 @@
 
     <!-- ANNOUNCEMENT SECTION -->
 <section class="mt-28 x-announcement w-full">
-  <div class="container pt-9 pb-16">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-9 pb-16">
     <div class="mb-10 flex justify-between items-center">
       <div>
         <h3
@@ -339,3 +339,4 @@
   </div>
 </section>
 @endsection
+{{-- tailwind-test:min-h-[90vh]:rounded-[20px]:animate-fade --}}

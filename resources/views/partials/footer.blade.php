@@ -7,7 +7,7 @@
     <!-- FOOTER SECTION -->
 <footer class="w-full mt-14 pt-20">
     <div
-    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 lg:gap-36 container"
+    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 lg:gap-36 container mx-auto px-4 sm:px-6 lg:px-8"
     >
     <div>
         <img
@@ -82,7 +82,7 @@
         </div>
     </div>
     </div>
-    <div class="container">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
     <hr class="mt-14 border-2 border-xneutral-300" />
     <p class="text-center my-6 font-poppins text-xneutral-200">
         Copyleft © 2025 | UNIVERSITAS PURBAYAN

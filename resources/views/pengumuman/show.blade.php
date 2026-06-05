@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <section class="container mt-28 px-4 md:px-16">
+    <section class="container mx-auto px-4 sm:px-6 lg:px-8 mt-28 px-4 md:px-16">
         <!-- Wrapper untuk memberikan spasi vertikal -->
         <div class="flex flex-col items-center space-y-4">
             <!-- Header Pengumuman -->

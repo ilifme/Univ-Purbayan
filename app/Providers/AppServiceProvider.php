@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\URL;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -16,6 +17,11 @@ class AppServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
+        // Vercel/HTTPS: force HTTPS scheme for all generated URLs
+        if ($this->app->environment("production")) {
+            URL::forceScheme("https");
+        }
+
         if ($this->app->environment("production")) {
             // Buat direktori yang diperlukan di /tmp/storage
             $dirs = [

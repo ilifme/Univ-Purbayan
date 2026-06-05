@@ -1,6 +1,6 @@
  <!-- NAVIGATION -->
  <header class="w-full fixed top-0 bg-white z-50">
-      <nav class="container flex justify-between py-5 items-center">
+      <nav class="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between py-5 items-center">
         <div>
           <a href="{{ route ('index')}}">
             <img

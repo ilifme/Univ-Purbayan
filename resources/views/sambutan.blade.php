@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
     <!-- MAIN SECTION -->
-    <article class="container mt-28">
+    <article class="container mx-auto px-4 sm:px-6 lg:px-8 mt-28">
       <h1
         class="text-xneutral-400 font-montserrat text-xl sm:text-2xl font-semibold"
       >

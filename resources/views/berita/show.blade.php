@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <section class="container mt-28 px-4 md:px-16">
+    <section class="container mx-auto px-4 sm:px-6 lg:px-8 mt-28 px-4 md:px-16">
         <div class="flex flex-col items-center space-y-4">
             <h1 class="text-3xl font-bold text-gray-800 text-center">
                 {{ $berita->title }}

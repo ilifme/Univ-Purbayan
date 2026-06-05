@@ -2,7 +2,7 @@
 @section('content')
 
     <!-- MAIN SECTION -->
-    <article class="container mt-28">
+    <article class="container mx-auto px-4 sm:px-6 lg:px-8 mt-28">
         <h1 class="text-neutral-400 font-montserrat text-xl sm:text-2xl font-semibold">Pengumuman</h1>
         <p class="text-neutral-200 text-sm sm:text-base font-montserrat font-semibold">Dapatkan Pengumuman terbaru</p>
 
