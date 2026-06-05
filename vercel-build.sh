@@ -1,4 +1,4 @@
-﻿#!/bin/bash
+#!/bin/bash
 echo "=== Vercel Build Script ==="
 
 # Install Node dependencies
