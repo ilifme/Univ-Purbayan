@@ -6,7 +6,7 @@
         id="hero-1"
         class="absolute animate-fade top-0 left-0 w-full h-full flex flex-col lg:flex-row lg:portrait:flex-col items-center justify-center rounded-[30px]"
       >
-        <div class="px-4 md:pl-12 md:pr-4 w-full lg:w-1/2 lg:portrait:w-full">
+        <div class="px-6 md:px-12 w-full lg:w-1/2 lg:portrait:w-full">
           <h1
             class="text-4xl font-semibold font-montserrat md:text-5xl/[60px] text-white mb-7"
           >
@@ -20,7 +20,7 @@
         </div>
         <img
           src="../assets/images/hero-illustration-1.png"
-          class="mr-4 sm:mr-8 z-0 w-full lg:w-1/2 lg:portrait:w-4/5"
+          class="z-0 w-full lg:w-1/2 lg:portrait:w-4/5"
           alt="Hero Image"
         />
       </div>
@@ -28,7 +28,7 @@
         id="hero-2"
         class="absolute top-0 animate-fade left-0 w-full h-full flex flex-col lg:flex-row lg:portrait:flex-col items-center justify-center rounded-[30px]"
       >
-        <div class="px-4 md:pl-12 md:pr-4 w-full lg:w-1/2 lg:portrait:w-full">
+        <div class="px-6 md:px-12 w-full lg:w-1/2 lg:portrait:w-full">
           <h1
             class="text-4xl font-semibold font-montserrat md:text-5xl/[60px] text-white mb-7"
           >
@@ -42,7 +42,7 @@
         </div>
         <img
           src="../assets/images/hero-illustration-2.png"
-          class="mr-4 sm:mr-8 z-0 w-full lg:w-1/2 lg:portrait:w-4/5"
+          class="z-0 w-full lg:w-1/2 lg:portrait:w-4/5"
           alt="Hero Image"
         />
       </div>
@@ -50,7 +50,7 @@
         id="hero-3"
         class="absolute animate-fade top-0 left-0 w-full h-full flex flex-col lg:flex-row lg:portrait:flex-col items-center justify-center rounded-[30px]"
       >
-        <div class="px-4 md:pl-12 md:pr-4 w-full lg:w-1/2 lg:portrait:w-full">
+        <div class="px-6 md:px-12 w-full lg:w-1/2 lg:portrait:w-full">
           <h1
             class="text-4xl font-semibold font-montserrat md:text-5xl/[60px] text-white mb-7"
           >
@@ -64,7 +64,7 @@
         </div>
         <img
           src="../assets/images/hero-illustration-3.png"
-          class="mr-4 sm:mr-8 z-0 w-full lg:w-1/2 lg:portrait:w-4/5"
+          class="z-0 w-full lg:w-1/2 lg:portrait:w-4/5"
           alt="Hero Image"
         />
       </div>
@@ -101,9 +101,9 @@
     <!-- ABOUT SECTION -->
     <section class="w-full overflow-hidden py-28">
       <div
-        class="container grid grid-cols-1 md:grid-cols-2 items-center gap-12"
+        class="container mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 items-center gap-12"
       >
-        <div class="space-y-4 lg:ml-10">
+        <div class="space-y-4">
           <h3
             class="text-primary-200 font-bold text-xl sm:text-2xl font-montserrat"
           >
