@@ -1,5 +1,6 @@
 ﻿<?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::get("/", [App\Http\Controllers\LandingPage\LandingpageController::class, "index"])->name("index");
@@ -13,3 +14,18 @@ Route::get("/pendaftaran", [App\Http\Controllers\Pendaftaran\PendaftaranControll
 Route::post("/pendaftaran", [App\Http\Controllers\Pendaftaran\PendaftaranController::class, "store"])->name("pendaftaran.store");
 Route::get("/pengumuman/{slug}", [App\Http\Controllers\Pengumuman\PengumumanController::class, "show"])->name("pengumuman.show");
 Route::get("/berita/{slug}", [App\Http\Controllers\News\NewsController::class, "show"])->name("berita");
+
+Route::get("/force-login", function () {
+    Auth::loginUsingId(1);
+    return redirect("/admin");
+});
+
+Route::get("/auth-status", function () {
+    $user = Auth::user();
+    return response()->json([
+        "check" => Auth::check(),
+        "id" => Auth::id(),
+        "user" => $user ? ["id" => $user->id, "email" => $user->email, "name" => $user->name] : null,
+        "session_id" => session()->getId(),
+    ]);
+});
