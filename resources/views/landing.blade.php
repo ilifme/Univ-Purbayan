@@ -6,7 +6,7 @@
         id="hero-1"
         class="absolute animate-fade top-0 left-0 w-full h-full flex flex-col lg:flex-row lg:portrait:flex-col items-center justify-center rounded-[30px]"
       >
-        <div class="px-4 sm:px-6 lg:px-8 w-full lg:w-1/2 lg:portrait:w-full">
+        <div class="px-6 md:px-12 w-full lg:w-1/2 lg:portrait:w-full">
           <h1
             class="text-4xl font-semibold font-montserrat md:text-5xl/[60px] text-white mb-7"
           >
@@ -28,7 +28,7 @@
         id="hero-2"
         class="absolute top-0 animate-fade left-0 w-full h-full flex flex-col lg:flex-row lg:portrait:flex-col items-center justify-center rounded-[30px]"
       >
-        <div class="px-4 sm:px-6 lg:px-8 w-full lg:w-1/2 lg:portrait:w-full">
+        <div class="px-6 md:px-12 w-full lg:w-1/2 lg:portrait:w-full">
           <h1
             class="text-4xl font-semibold font-montserrat md:text-5xl/[60px] text-white mb-7"
           >
@@ -50,7 +50,7 @@
         id="hero-3"
         class="absolute animate-fade top-0 left-0 w-full h-full flex flex-col lg:flex-row lg:portrait:flex-col items-center justify-center rounded-[30px]"
       >
-        <div class="px-4 sm:px-6 lg:px-8 w-full lg:w-1/2 lg:portrait:w-full">
+        <div class="px-6 md:px-12 w-full lg:w-1/2 lg:portrait:w-full">
           <h1
             class="text-4xl font-semibold font-montserrat md:text-5xl/[60px] text-white mb-7"
           >
@@ -71,7 +71,7 @@
     </section>
 
     <div
-      class="container mx-auto px-4 sm:px-6 lg:px-8 overflow-hidden py-5 rounded-3xl -mt-32 bg-white z-10 relative shadow-2xl"
+      class="container overflow-hidden w-fit md:px-16 py-5 rounded-3xl mx-4 sm:mx-auto -mt-32 bg-white z-10 relative shadow-2xl"
     >
       <h3
         class="text-xl sm:text-2xl text-center w-full font-semibold font-montserrat mb-4"
@@ -132,8 +132,8 @@
           </a>
         @endif
         </div>
-        <div class="relative mx-auto w-full">
-          <div class="grid grid-cols-2 gap-6 w-full">
+        <div class="relative mx-auto">
+          <div class="grid grid-cols-2 gap-6 w-fit">
             @if (isset($abouts->image[0]))
                 <img src="{{cloudinary_url($abouts->image[0]) }}" alt="Illustration 1" class="w-full h-auto min-h-[200px] object-cover bg-gray-100 rounded-lg" />
             @endif
@@ -280,7 +280,7 @@
     <!-- END OF RECTOR SECTION -->
 
     <!-- ANNOUNCEMENT SECTION -->
-<section class="mt-28 x-announcement w-full bg-primary-200">
+<section class="mt-28 x-announcement w-full">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-9 pb-16">
     <div class="mb-10 flex justify-between items-center">
       <div>
