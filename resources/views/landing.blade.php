@@ -80,7 +80,7 @@
       </h3>
       <div class="flex overflow-x-auto gap-16">
         @if($cooperationImg->isEmpty())
-            <p class="text-center text-xneutral-200 font -monserrat text-lg">
+            <p class="text-center text-xneutral-200 font-montserrat text-lg">
               No Data Availabe
             </p>
         @else
@@ -110,7 +110,7 @@
             TENTANG KAMI
           </h3>
           @if (empty($abouts->content) && empty ($abouts->image))
-            <p class="text-center text-xneutral-200 font -monserrat text-lg">
+            <p class="text-center text-xneutral-200 font-montserrat text-lg">
               No Data Availabe
             </p>
             @else
@@ -132,16 +132,16 @@
           </a>
         @endif
         </div>
-        <div class="relative">
+        <div class="relative mx-auto">
           <div class="grid grid-cols-2 gap-6 w-fit">
             @if (isset($abouts->image[0]))
-                <img src="{{asset('storage/'. $abouts->image[0]) }}" alt="Illustration 1" />
+                <img src="{{asset('storage/'. $abouts->image[0]) }}" alt="Illustration 1" class="w-full h-auto min-h-[200px] object-cover bg-gray-100 rounded-lg" />
             @endif
             @if (isset($abouts->image[1]))
-                <img src="{{asset('storage/'. $abouts->image[1])}}" alt="Illustration 2" />
+                <img src="{{asset('storage/'. $abouts->image[1])}}" alt="Illustration 2" class="w-full h-auto min-h-[200px] object-cover bg-gray-100 rounded-lg" />
             @endif
             @if (isset($abouts->image[2]))
-            <img src="{{asset('storage/'. $abouts->image[2])}}" alt="illustration 3 "/>
+            <img src="{{asset('storage/'. $abouts->image[2])}}" alt="Illustration 3" class="w-full h-auto min-h-[200px] object-cover bg-gray-100 rounded-lg mt-0 col-span-2" />
             @endif
           </div>
           <img
