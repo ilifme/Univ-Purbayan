@@ -1,13 +1,13 @@
 @php
     $footerLogo = $datafooter?->image
-        ? \Illuminate\Support\Facades\Storage::url($datafooter->image)
-        : asset('assets/images/logo-smk.png');
+        ? cloudinary_url($datafooter->image)
+        : asset('assets/images/logo-larana.png');
 @endphp
 
     <!-- FOOTER SECTION -->
 <footer class="w-full mt-14 pt-20">
     <div
-    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 lg:gap-36 container mx-auto px-4 sm:px-6 lg:px-8"
+    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 lg:gap-16 container mx-auto px-4 sm:px-6 lg:px-8"
     >
     <div>
         <img
@@ -90,3 +90,4 @@
     </div>
 </footer>
     <!-- END OF FOOTER SECTION -->
+

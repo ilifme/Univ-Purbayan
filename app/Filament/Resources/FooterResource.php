@@ -23,7 +23,7 @@ class FooterResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\FileUpload::make('image')
+                Forms\Components\FileUpload::make('image')->disk('cloudinary')
                     ->image()
                     ->required(),
                 Forms\Components\TextInput::make('link_instagram')
@@ -58,7 +58,7 @@ class FooterResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\ImageColumn::make('image'),
+                Tables\Columns\ImageColumn::make('image')->disk('cloudinary'),
                 Tables\Columns\TextColumn::make('link_instagram')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('link_facebook')
@@ -113,3 +113,5 @@ class FooterResource extends Resource
         ];
     }
 }
+
+

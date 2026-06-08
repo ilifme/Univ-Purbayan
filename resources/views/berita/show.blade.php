@@ -14,7 +14,7 @@
         @if ($berita->image)
             <div class="mt-10 overflow-hidden rounded-lg shadow-lg">
                 <img
-                    src="{{ asset('storage/' . $berita->image) }}"
+                    src="{{ cloudinary_url($berita->image) }}"
                     alt="{{ $berita->title }}"
                     class="w-full max-h-[520px] object-cover"
                 />
@@ -28,3 +28,5 @@
         </div>
     </section>
 @endsection
+
+

@@ -33,6 +33,12 @@ return [
             "throw" => false,
         ],
 
+        "cloudinary" => [
+            "driver" => "cloudinary",
+            "url" => env("CLOUDINARY_URL"),
+            "prefix" => env("CLOUDINARY_PREFIX", ""),
+        ],
+
     ],
 
     "links" => [
@@ -40,3 +46,5 @@ return [
     ],
 
 ];
+
+

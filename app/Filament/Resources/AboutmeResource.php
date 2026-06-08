@@ -25,7 +25,7 @@ class AboutmeResource extends Resource
             ->schema([
                 Forms\Components\Textarea::make('content')
                 ->columnSpanFull(),
-                Forms\Components\FileUpload::make('image')
+                Forms\Components\FileUpload::make('image')->disk('cloudinary')
                 ->image()
                 ->multiple()
                 ->maxFiles(3)
@@ -40,7 +40,7 @@ class AboutmeResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('content')
                 ->searchable(),
-                Tables\Columns\ImageColumn::make('image'),
+                Tables\Columns\ImageColumn::make('image')->disk('cloudinary'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -79,3 +79,5 @@ class AboutmeResource extends Resource
         ];
     }
 }
+
+

@@ -6,7 +6,7 @@
         id="hero-1"
         class="absolute animate-fade top-0 left-0 w-full h-full flex flex-col lg:flex-row lg:portrait:flex-col items-center justify-center rounded-[30px]"
       >
-        <div class="px-6 md:px-12 w-full lg:w-1/2 lg:portrait:w-full">
+        <div class="px-4 sm:px-6 lg:px-8 w-full lg:w-1/2 lg:portrait:w-full">
           <h1
             class="text-4xl font-semibold font-montserrat md:text-5xl/[60px] text-white mb-7"
           >
@@ -28,7 +28,7 @@
         id="hero-2"
         class="absolute top-0 animate-fade left-0 w-full h-full flex flex-col lg:flex-row lg:portrait:flex-col items-center justify-center rounded-[30px]"
       >
-        <div class="px-6 md:px-12 w-full lg:w-1/2 lg:portrait:w-full">
+        <div class="px-4 sm:px-6 lg:px-8 w-full lg:w-1/2 lg:portrait:w-full">
           <h1
             class="text-4xl font-semibold font-montserrat md:text-5xl/[60px] text-white mb-7"
           >
@@ -50,7 +50,7 @@
         id="hero-3"
         class="absolute animate-fade top-0 left-0 w-full h-full flex flex-col lg:flex-row lg:portrait:flex-col items-center justify-center rounded-[30px]"
       >
-        <div class="px-6 md:px-12 w-full lg:w-1/2 lg:portrait:w-full">
+        <div class="px-4 sm:px-6 lg:px-8 w-full lg:w-1/2 lg:portrait:w-full">
           <h1
             class="text-4xl font-semibold font-montserrat md:text-5xl/[60px] text-white mb-7"
           >
@@ -71,7 +71,7 @@
     </section>
 
     <div
-      class="container overflow-hidden w-fit md:px-16 py-5 rounded-3xl mx-4 sm:mx-auto -mt-32 bg-white z-10 relative shadow-2xl"
+      class="container mx-auto px-4 sm:px-6 lg:px-8 overflow-hidden py-5 rounded-3xl -mt-32 bg-white z-10 relative shadow-2xl"
     >
       <h3
         class="text-xl sm:text-2xl text-center w-full font-semibold font-montserrat mb-4"
@@ -87,7 +87,7 @@
             @foreach ($cooperationImg as $image)
               <img
                   class="w-12 md:w-28 h-16 object-contain"
-                  src="{{ asset('storage/'. $image->image)}}"
+                  src="{{ cloudinary_url($image->image)}}"
                   alt="Cooperation"
               />
             @endforeach
@@ -132,16 +132,16 @@
           </a>
         @endif
         </div>
-        <div class="relative mx-auto">
-          <div class="grid grid-cols-2 gap-6 w-fit">
+        <div class="relative mx-auto w-full">
+          <div class="grid grid-cols-2 gap-6 w-full">
             @if (isset($abouts->image[0]))
-                <img src="{{asset('storage/'. $abouts->image[0]) }}" alt="Illustration 1" class="w-full h-auto min-h-[200px] object-cover bg-gray-100 rounded-lg" />
+                <img src="{{cloudinary_url($abouts->image[0]) }}" alt="Illustration 1" class="w-full h-auto min-h-[200px] object-cover bg-gray-100 rounded-lg" />
             @endif
             @if (isset($abouts->image[1]))
-                <img src="{{asset('storage/'. $abouts->image[1])}}" alt="Illustration 2" class="w-full h-auto min-h-[200px] object-cover bg-gray-100 rounded-lg" />
+                <img src="{{cloudinary_url($abouts->image[1])}}" alt="Illustration 2" class="w-full h-auto min-h-[200px] object-cover bg-gray-100 rounded-lg" />
             @endif
             @if (isset($abouts->image[2]))
-            <img src="{{asset('storage/'. $abouts->image[2])}}" alt="Illustration 3" class="w-full h-auto min-h-[200px] object-cover bg-gray-100 rounded-lg mt-0 col-span-2" />
+            <img src="{{cloudinary_url($abouts->image[2])}}" alt="Illustration 3" class="w-full h-auto min-h-[200px] object-cover bg-gray-100 rounded-lg mt-0 col-span-2" />
             @endif
           </div>
           <img
@@ -198,7 +198,7 @@
                       <!-- Gambar -->
                       <div class="max-h-[214px] rounded-2xl overflow-hidden mb-4">
                           <img 
-                              src="{{ asset('storage/'. $newslist->image) }}" 
+                              src="{{ cloudinary_url($newslist->image) }}" 
                               alt="{{ $newslist->title }}" 
                               class="w-full h-full object-cover"
                           />
@@ -260,7 +260,7 @@
           @foreach ( $headmasters as $headmaster )
               <div class="flex flex-col items-center">
                 <div class="rounded-full overflow-hidden w-fit mb-6">
-                  <img src="{{ asset ('storage/'. $headmaster->image) }}" alt="{{ $headmaster->nama}}" />
+                  <img src="{{ cloudinary_url($headmaster->image) }}" alt="{{ $headmaster->nama}}" />
                 </div>
                 <p
                 class="mb-[2px] text-sm sm:text-base text-xneutral-400 font-semibold font-montserrat"
@@ -280,7 +280,7 @@
     <!-- END OF RECTOR SECTION -->
 
     <!-- ANNOUNCEMENT SECTION -->
-<section class="mt-28 x-announcement w-full">
+<section class="mt-28 x-announcement w-full bg-primary-200">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-9 pb-16">
     <div class="mb-10 flex justify-between items-center">
       <div>
@@ -340,3 +340,5 @@
 </section>
 @endsection
 {{-- tailwind-test:min-h-[90vh]:rounded-[20px]:animate-fade --}}
+
+

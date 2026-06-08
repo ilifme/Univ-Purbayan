@@ -42,7 +42,7 @@ class TeacherResource extends Resource
                 Forms\Components\TextInput::make('topik')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\FileUpload::make('image')
+                Forms\Components\FileUpload::make('image')->disk('cloudinary')
                     ->required()
                     ->image()
                     ->columnSpanFull(),
@@ -65,7 +65,7 @@ class TeacherResource extends Resource
                     ->searchable(),
                 Tables\Columns\TextColumn::make('topik')
                     ->searchable(),
-                Tables\Columns\ImageColumn::make('image'), 
+                Tables\Columns\ImageColumn::make('image')->disk('cloudinary'), 
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -104,3 +104,5 @@ class TeacherResource extends Resource
         ];
     }
 }
+
+

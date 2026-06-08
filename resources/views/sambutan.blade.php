@@ -22,7 +22,7 @@
         
       <div class="grid grid-cols-1 sm:grid-cols-12 gap-8 mt-8">
         <img
-          src="{{ asset ('storage/'. $greeting->image) }}"
+          src="{{ cloudinary_url( $greeting->image) }}"
           alt="SMK 2"
           class="w-full h-fit object-cover rounded-[30px] sm:col-span-4"
         />
@@ -39,3 +39,4 @@
     </article>
 
 @endsection
+

@@ -23,7 +23,7 @@ class CooperationResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\FileUpload::make('image')
+                Forms\Components\FileUpload::make('image')->disk('cloudinary')
                     ->required()
                     ->columnSpanFull(),
             ]);
@@ -33,7 +33,7 @@ class CooperationResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\ImageColumn::make('image'),
+                Tables\Columns\ImageColumn::make('image')->disk('cloudinary'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -72,3 +72,5 @@ class CooperationResource extends Resource
         ];
     }
 }
+
+

@@ -40,7 +40,7 @@
         </div>
         <div>
           @if ($visimisiImg && is_array($visimisiImg) && isset($visimisiImg[0]))
-              <img src="{{ asset('storage/' . $visimisiImg[0]) }}" alt="Inovatif" />
+              <img src="{{ cloudinary_url($visimisiImg[0]) }}" alt="Inovatif" />
           @else
               <p>No Images Available</p>
           @endif
@@ -56,7 +56,7 @@
         </div>
         <div>
           @if ($visimisiImg && is_array($visimisiImg) && isset($visimisiImg[1]))
-              <img src="{{ asset('storage/' . $visimisiImg[1]) }}" alt="Profesional" />
+              <img src="{{ cloudinary_url($visimisiImg[1]) }}" alt="Profesional" />
           @else
               <p>No Images Available</p>
           @endif
@@ -72,7 +72,7 @@
         </div>
         <div>
           @if ($visimisiImg && is_array($visimisiImg) && isset($visimisiImg[2]))
-              <img src="{{ asset('storage/' . $visimisiImg[2]) }}" alt="Islami" />
+              <img src="{{ cloudinary_url($visimisiImg[2]) }}" alt="Islami" />
           @else
               <p>No Images Available</p>
           @endif
@@ -80,3 +80,5 @@
       </div>
     </article>
 @endsection
+
+

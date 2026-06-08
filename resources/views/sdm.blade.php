@@ -25,7 +25,7 @@
         <div class="flex flex-col items-center sm:flex-row gap-8 sm:gap-16">
           <img
             class="sm:col-span-2"
-            src="{{asset ('storage/'. $teacher->image) }}"
+            src="{{cloudinary_url( $teacher->image) }}"
             alt="guru"
           />
           <div class="sm:col-span-10 font-montserrat">
@@ -95,7 +95,7 @@
           <div class="flex flex-col items-center sm:flex-row gap-8 sm:gap-16">
             <img
               class="sm:col-span-2"
-              src="{{asset ('storage/'. $admin->image) }}"
+              src="{{cloudinary_url( $admin->image) }}"
               alt="admin"
             />
             <div class="sm:col-span-10 font-montserrat">
@@ -126,3 +126,4 @@
     </article>
 
 @endsection
+

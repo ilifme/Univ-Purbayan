@@ -22,7 +22,7 @@
           @foreach ( $facilities as $facility )
       <div class="grid grid-cols-1 sm:grid-cols-12 gap-8 mt-8">
         <img
-          src="{{ asset ('storage/'. $facility->image) }}"
+          src="{{ cloudinary_url( $facility->image) }}"
           alt="Laboratorium Sistem dan Teknologi Informasi"
           class="w-full h-fit object-cover rounded-[30px] sm:col-span-5"
         />

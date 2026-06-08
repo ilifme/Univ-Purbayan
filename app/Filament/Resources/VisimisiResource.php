@@ -30,7 +30,7 @@ class VisimisiResource extends Resource
                 TinyEditor::make('misi')
                     ->required()
                     ->columnSpanFull(),
-                    Forms\Components\FileUpload::make('image')
+                    Forms\Components\FileUpload::make('image')->disk('cloudinary')
                     ->required()
                     ->image()
                     ->multiple()
@@ -51,7 +51,7 @@ class VisimisiResource extends Resource
                 ->wrap()
                 ->html()
                 ->searchable(),
-                 Tables\Columns\ImageColumn::make('image'), 
+                 Tables\Columns\ImageColumn::make('image')->disk('cloudinary'), 
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -90,3 +90,5 @@ class VisimisiResource extends Resource
         ];
     }
 }
+
+

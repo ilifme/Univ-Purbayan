@@ -19,7 +19,7 @@
         <!-- Gambar Sejarah -->
         <div class="sm:col-span-5">
           <img
-            src="{{ asset('storage/' . $history->image) }}"
+            src="{{ cloudinary_url($history->image) }}"
             alt="Sejarah SMK 2"
             class="w-full h-[600px] object-cover rounded-[30px]"
           />
@@ -37,3 +37,8 @@
     </article>
 
 @endsection
+
+
+
+
+

@@ -39,7 +39,7 @@ class StudentResource extends Resource
                 Forms\Components\TextInput::make('jalur')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\FileUpload::make('image')
+                Forms\Components\FileUpload::make('image')->disk('cloudinary')
                     ->required()
                     ->image()
                     ->columnSpanFull(),
@@ -66,7 +66,7 @@ class StudentResource extends Resource
                     ->searchable(),
                 Tables\Columns\TextColumn::make('jalur')
                     ->searchable(),
-                Tables\Columns\ImageColumn::make('image'),
+                Tables\Columns\ImageColumn::make('image')->disk('cloudinary'),
                 Tables\Columns\TextColumn::make('programstudi_1')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('programstudi_2')
@@ -109,3 +109,5 @@ class StudentResource extends Resource
         ];
     }
 }
+
+
