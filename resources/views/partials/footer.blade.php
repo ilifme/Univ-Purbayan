@@ -85,7 +85,7 @@
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
     <hr class="mt-14 border-2 border-xneutral-300" />
     <p class="text-center my-6 font-poppins text-xneutral-200">
-        Copyleft © 2025 | UNIVERSITAS PURBAYAN
+        Copyright 2025 | UNIVERSITAS PURBAYAN
     </p>
     </div>
 </footer>
